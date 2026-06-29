@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل التميز التشغيلي والسلوكي للمنشآت (BOS)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            950: '#030712',
+                        },
+                        slate: {
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts for Tajawal (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-600 p-2 rounded-lg text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-lg font-bold text-slate-900 tracking-tight">نظام BOS التشغيلي</span>
+                    <span class="hidden sm:inline-block text-xs text-slate-500 mr-2 border-r pr-2 border-slate-200">التميز السلوكي للمنشآت</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                <a href="#intro" class="hover:text-brand-600 transition">المقدمة</a>
+                <a href="#hr-toolkit" class="hover:text-brand-600 transition">ممكنات الموارد البشرية</a>
+                <a href="#diagnostic" class="hover:text-brand-600 transition">أداة التشخيص</a>
+                <a href="#protocol" class="hover:text-brand-600 transition">البروتوكول اليومي</a>
+                <a href="#tracker" class="hover:text-brand-600 transition">لوحة المتابعة</a>
+                <a href="#matrix" class="hover:text-brand-600 transition">الأسئلة التوليدية</a>
+            </nav>
+            <div>
+                <a href="#diagnostic" class="bg-brand-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-700 transition shadow-sm inline-flex items-center gap-2">
+                    <span>ابدأ التشخيص</span>
+                    <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900 text-white overflow-hidden py-16 sm:py-24">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_45%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-600/30 text-brand-300 border border-brand-500/30 mb-6">
+                    ⚡ دليل تمكين الأداء وإعادة صياغة العادات التنظيمية المدعوم بالذكاء الاصطناعي
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    دليل التميز التشغيلي والسلوكي <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">للمنشآت الصغيرة والمتوسطة</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8">
+                    كيف تفكك ركود الروتين، وتبني "منظمة متعلمة"، وتكافح النسيان المؤسسي والزهايمر التنظيمي داخل منشأتك العريقة في 21 يوماً فقط؟
+                </p>
+                
+                <div class="flex flex-wrap gap-4 items-center mb-10">
+                    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-white/10">
+                        <span class="text-3xl">🧠</span>
+                        <div>
+                            <div class="text-xs text-slate-400">إطار عمل قائم على</div>
+                            <div class="text-sm font-bold text-white">العلوم العصبية المعرفية</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-white/10">
+                        <span class="text-3xl">⏱️</span>
+                        <div>
+                            <div class="text-xs text-slate-400">مدة الإيقاع اليومي</div>
+                            <div class="text-sm font-bold text-white">45 دقيقة صباحية فقط</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="flex -space-x-2 space-x-reverse">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 border-2 border-slate-900 flex items-center justify-center font-bold text-xs">M</div>
+                        <div class="w-10 h-10 rounded-full bg-slate-600 border-2 border-slate-900 flex items-center justify-center font-bold text-xs">HR</div>
+                        <div class="w-10 h-10 rounded-full bg-slate-500 border-2 border-slate-900 flex items-center justify-center font-bold text-xs">CEO</div>
+                    </div>
+                    <div class="text-xs text-slate-400">
+                        مصمم ومطور لتمكين <span class="text-white font-medium">القيادة العليا، الموارد البشرية، ومدراء الأقسام</span>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory Intro & Author Profile -->
+    <section id="intro" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 -mt-10 relative z-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Main Advisory Narrative Card -->
+            <div class="lg:col-span-2 bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span>🧠</span> تمهيد استشاري: الجسر بين المرونة العصبية والنمو المؤسسي
+                    </h2>
+                    <div class="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+                        <p>
+                            إن الفارق الجوهري بين المنشآت التي تتطور باستمرار وتلك التي تواجه ركوداً تشغيلياً لا يكمن في جودة الأنظمة الورقية المودعة في الأدراج، بل في مدى مواءمة هذه الأنظمة مع <strong>طبيعة العمل البشري</strong>.
+                        </p>
+                        <p>
+                            لقد أثبتت الدراسات العصبية أن العقل البشري يمتلك ميزة "المرونة العصبية" القادرة على إعادة بناء المسارات السلوكية، لكنه في المقابل محكوم بـ <strong>"منحنى النسيان الطبيعي"</strong> في حال غياب الممارسة والمتابعة المستمرة. هذه الظاهرة تظهر مؤسسياً في المنشآت على شكل <strong>"الزهايمر التنظيمي"</strong>؛ تندثر المهارات والالتزام بمجرد انتهاء حماس البدايات أو الورش التدريبية.
+                        </p>
+                        <p class="text-brand-700 bg-brand-50 p-4 rounded-xl border-r-4 border-brand-600 font-medium">
+                            لذلك، لا نقدم هنا لوائح جامدة، بل نظام تشغيل سلوكي (Behavioural Operating System - BOS) يحول المفاهيم السلوكية إلى ممارسات يومية رشيقة لتعديل الأداء وتثبيت المعرفة وتفكيك روتين الأعمال.
+                        </p>
+                    </div>
+                </div>
+                <div class="border-t border-slate-100 mt-6 pt-4 text-xs text-slate-400 flex items-center justify-between">
+                    <span>* تم إعداده بمساندة الذكاء الاصطناعي لضمان الجودة التشغيلية</span>
+                    <span class="font-semibold text-slate-600">منهجية قابلة للتخصيص بالكامل</span>
+                </div>
+            </div>
+
+            <!-- Author Card -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-950 text-white rounded-2xl shadow-xl p-6 sm:p-8 border border-slate-800 flex flex-col justify-between">
+                <div class="text-center pb-6 border-b border-slate-800/60">
+                    <div class="w-20 h-20 bg-brand-600 text-white rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-4 shadow-lg shadow-brand-500/20">
+                        أف
+                    </div>
+                    <h3 class="text-lg font-bold text-white">أماني الفريدي</h3>
+                    <p class="text-xs text-brand-400 mt-1">مستشار تطوير الأداء والموارد البشرية</p>
+                    <p class="text-xs text-slate-400 mt-2 px-4 leading-relaxed">
+                        شغوفة بتمكين المنشآت الصغيرة والمتوسطة والعريقة من تفكيك التكلس العملياتي وتحويل الأداء التقليدي إلى أداء عالي ورشيق.
+                    </p>
+                </div>
+                <div class="pt-6">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-xs bg-slate-800/40 p-2.5 rounded-lg border border-slate-800">
+                            <span class="text-brand-400">💡</span>
+                            <span>دمج العلوم العصبية بأفضل الممارسات الإدارية</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs bg-slate-800/40 p-2.5 rounded-lg border border-slate-800">
+                            <span class="text-brand-400">🤝</span>
+                            <span>المنظومة البشرية قادرة على التناغم والنمو</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <a href="https://www.linkedin.com/in/amani-al-freidi" target="_blank" class="w-full bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition duration-200 shadow-md">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <span>تواصل معي عبر LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- The Silent Challenge Accordion -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold text-slate-900 mb-3">التحدي الصامت في المنشآت المستقرة</h2>
+            <p class="text-slate-500 text-sm sm:text-base">مع مرور السنوات واستقرار الأعمال، يتسلل "الركود الروتيني وتكلس العمليات" لجسد المنظمة. ما هي أبرز المظاهر الخفية التي تستنزف المنشأة؟</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition duration-200">
+                <div class="w-12 h-12 rounded-lg bg-red-50 text-red-600 flex items-center justify-center text-2xl font-bold mb-4">⚙️</div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">تراجع الالتزام الواعي</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">
+                    ينفذ الموظفون الإجراءات بطريقة آلية روتينية تفتقر للفهم الفعلي للمنفعة، أو ينزلقون تدريجياً للعودة إلى الطرق القديمة المهملة دون وعي.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition duration-200">
+                <div class="w-12 h-12 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-2xl font-bold mb-4">📉</div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">اندثار المهارات (Skills Decay)</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">
+                    تتحول الحقائب والبرامج التدريبية المكلّفة إلى حبر على ورق بمجرد انتهاء الورشة مباشرة نتيجة لغياب قنوات التطبيق المستمر في بيئة العمل اليومية.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition duration-200">
+                <div class="w-12 h-12 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-4">🛑</div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">نزيف التشتت البيروقراطي</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">
+                    تُهدر ما يقارب 25% من الطاقة الإنتاجية للفريق في معالجة الطوارئ اليومية والمقاطعات الفجائية (Switching Costs) بسبب غياب تحديث الذاكرة المؤسسية.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HR Enablement Services Package -->
+    <section id="hr-toolkit" class="bg-slate-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-600 text-xs font-bold tracking-wider uppercase bg-brand-50 px-3 py-1 rounded-full border border-brand-100">تمكين الموارد البشرية</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-4">حزمة ممكنات الإدارة الذاتية لفريق الموارد البشرية</h2>
+                <p class="text-slate-500 text-sm sm:text-base">لكي يقود فريق الموارد البشرية نظام BOS بنجاح واستقلالية، تم تأسيس 3 خدمات قيادية وتوجيهية داخلياً بالكامل:</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded-md">خدمة دورية</span>
+                            <span class="text-2xl">⚖️</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">1. التحكيم التشخيصي المحايد</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">
+                            يتولى فريق الموارد البشرية دور "الطرف الثالث المحايد" لقياس الفجوة الإدراكية (Perception Gap) بين القيادة التنفيذية والموظفين بشكل ربع أو نصف سنوي، من خلال تقديم تقارير دورية مدعومة بالأرقام الحقيقية.
+                        </p>
+                        <div class="bg-slate-50 p-3 rounded-lg text-xs text-slate-600 border border-slate-100">
+                            <strong>الأداة المستعملة:</strong> أداة المسح الرقمي (SMEs-15) والفرز الإحصائي المستقل.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">تمكين الأداء</span>
+                            <span class="text-2xl">✍️</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">2. مكتبة هندسة وتطويع البروتوكولات</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">
+                            يعمل الـ HR كشريك أعمال ومصمم أداء (HR Business Partner) لتفكيك وتخصيص تمارين الـ BOS لتتناسب مع طبيعة واحتياجات كل قسم (مبيعات، عمليات، دعم فني) ومتابعة صياغة الأسئلة التوليدية دورياً.
+                        </p>
+                        <div class="bg-slate-50 p-3 rounded-lg text-xs text-slate-600 border border-slate-100">
+                            <strong>الأداة المستعملة:</strong> مصفوفة هندسة الأسئلة التوليدية الذكية.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">قيادة التغيير</span>
+                            <span class="text-2xl">📢</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">3. تيسير التغيير والتأهيل القيادي</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">
+                            حقيبة مصممة لتمكين المدراء من مواجهة مقاومة التغيير السلوكي لدى الأفراد وتسهيل إدارة جلسات الكوتشينج المصغرة (Micro-Coaching) لحل مشكلات الالتزام بالوقت، وتحويل البروتوكول لطقس يومي ناجح.
+                        </p>
+                        <div class="bg-slate-50 p-3 rounded-lg text-xs text-slate-600 border border-slate-100">
+                            <strong>الأداة المستعملة:</strong> ورشة عمل BOS BootCamp وأجندة الـ 21 يوماً.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Diagnostic (SMEs-15) -->
+    <section id="diagnostic" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+            
+            <!-- Instructions and Explanation -->
+            <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900 text-white p-8 sm:p-12 flex flex-col justify-between">
+                <div>
+                    <span class="text-brand-400 text-xs font-bold tracking-widest uppercase">مؤشر الأداء السلوكي</span>
+                    <h2 class="text-3xl font-bold mt-2 mb-6">أداة التشخيص المؤسسي الفوري (SMEs-15)</h2>
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                        تم بناء هذا الاستبيان لقياس الفجوة الإدراكية للأداء والسلوك التنظيمي. اختر مدى موافقتك على العبارات الخمس الأساسية التالية لتقييم صحة نظام تشغيلك السلوكي فوراً.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✓</div>
+                            <p class="text-xs text-slate-300">السرية الكاملة: تستخدم الإجابات للتشخيص وتحسين العمليات فقط.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✓</div>
+                            <p class="text-xs text-slate-300">التقييم الفوري والذكي: تعرف على تصنيف صحة منشأتك عبر تقرير معزز بالذكاء الاصطناعي.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 pt-6 border-t border-white/10 text-xs text-slate-400">
+                    <p>المقياس مبني على منهجية مقياس ليكرت الخماسي المعتمد في استشارات التطوير التنظيمي والموارد البشرية.</p>
+                </div>
+            </div>
+
+            <!-- Interactive Diagnostic Form Area -->
+            <div class="lg:col-span-7 p-8 sm:p-12" id="survey-container">
+                <h3 class="text-xl font-bold text-slate-900 mb-6">عيّنة أسئلة التشخيص الاسترشادية:</h3>
+                
+                <div class="space-y-6" id="questions-box">
+                    <!-- Q1 -->
+                    <div class="question-item" data-weight="1">
+                        <p class="text-sm font-semibold text-slate-800 mb-3">1. مأسسة وإدارة المعرفة: "إذا غاب موظف رئيسي فجأة، فإن العمل يسير بسلاسة لأن الإجراءات موثقة ومتاحة للجميع."</p>
+                        <div class="grid grid-cols-5 gap-2 text-center text-xs">
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q1" value="5" class="hidden"> موافق بشدة (5)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q1" value="4" class="hidden"> موافق (4)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q1" value="3" class="hidden"> محايد (3)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q1" value="2" class="hidden"> غير موافق (2)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q1" value="1" class="hidden"> بشدة (1)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="question-item" data-weight="2">
+                        <p class="text-sm font-semibold text-slate-800 mb-3">2. هدر التشتت والطوارئ: "نادراً ما يتم سحبي فجأة من مهامي الأساسية المخطط لها لتغطية أزمات أو طوارئ تشغيلية متكررة."</p>
+                        <div class="grid grid-cols-5 gap-2 text-center text-xs">
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q2" value="5" class="hidden"> موافق بشدة (5)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q2" value="4" class="hidden"> موافق (4)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q2" value="3" class="hidden"> محايد (3)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q2" value="2" class="hidden"> غير موافق (2)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q2" value="1" class="hidden"> بشدة (1)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="question-item" data-weight="3">
+                        <p class="text-sm font-semibold text-slate-800 mb-3">3. تدفق البيانات وتكاملها: "أحصل على المعلومات والتحديثات التي أحتاجها من الأقسام الأخرى بسلاسة دون تأخير أو نزاعات."</p>
+                        <div class="grid grid-cols-5 gap-2 text-center text-xs">
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q3" value="5" class="hidden"> موافق بشدة (5)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q3" value="4" class="hidden"> موافق (4)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q3" value="3" class="hidden"> محايد (3)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q3" value="2" class="hidden"> غير موافق (2)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q3" value="1" class="hidden"> بشدة (1)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="question-item" data-weight="4">
+                        <p class="text-sm font-semibold text-slate-800 mb-3">4. الارتباط واستدامة الشغف: "أشعر بالدافعية والشغف المستمر في عملي ولا أشعر بالوقوع في فخ الروتين القاتل أو الاستقالة الصامتة."</p>
+                        <div class="grid grid-cols-5 gap-2 text-center text-xs">
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q4" value="5" class="hidden"> موافق بشدة (5)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q4" value="4" class="hidden"> موافق (4)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q4" value="3" class="hidden"> محايد (3)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q4" value="2" class="hidden"> غير موافق (2)
+                            </label>
+                            <label class="cursor-pointer border border-slate-200 rounded-lg py-2 bg-slate-50 hover:bg-brand-50 transition block">
+                                <input type="radio" name="q4" value="1" class="hidden"> بشدة (1)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Free Text Challenge input (as per the word file request) -->
+                <div class="mt-6">
+                    <label class="block text-xs font-bold text-slate-700 mb-2">💡 مساحة حرة (سرية): يرجى كتابة تحدي تشغيلي واحد واجهته مؤخراً يمنع فريقك من الأداء العالي:</label>
+                    <textarea id="diag-custom-challenge" rows="3" class="w-full text-sm border border-slate-200 rounded-lg p-3 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="مثال: نعاني من تأخير دائم في تسليم تقارير المبيعات الأسبوعية بسبب صعوبة استخراج البيانات من النظام القديم..."></textarea>
+                </div>
+
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 items-center">
+                    <button onclick="calculateDiagnosticScore()" class="bg-slate-900 text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-slate-800 transition shadow-sm w-full sm:w-auto">
+                        احسب نقاط منشأتك التشغيلية
+                    </button>
+                    <button id="ai-diagnose-btn" onclick="generateAIDiagnosticReport()" class="bg-brand-600 text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-brand-700 transition shadow-sm w-full sm:w-auto flex items-center justify-center gap-2">
+                        <span>✨ تحليل تشخيصي ذكي بالذكاء الاصطناعي</span>
+                    </button>
+                </div>
+
+                <!-- Custom feedback messages for UI diagnostics -->
+                <div id="ai-error-message" class="hidden mt-4 p-3 bg-red-50 text-red-700 text-xs rounded-lg border border-red-200 font-bold"></div>
+
+                <!-- Result Card Container (hidden initially) -->
+                <div id="result-card" class="mt-8 p-6 rounded-2xl hidden border">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <div class="text-xs uppercase font-bold tracking-wider mb-1">المعدل المحسوب للتقييم:</div>
+                            <div class="text-2xl font-extrabold" id="result-score-text">0.0 / 5.0</div>
+                        </div>
+                        <span class="text-3xl" id="result-status-emoji">💡</span>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="text-sm font-bold mb-2" id="result-status-title">التصنيف: لم يتم الحساب بعد</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed" id="result-status-desc">الرجاء تحديد خياراتك من الأسئلة في الأعلى لتوليد تقرير تشخيصي فوري وتحليل الواقع التشغيلي لمنشأتك.</p>
+                    </div>
+
+                    <!-- AI Tailored Report Block Inside Diagnostics -->
+                    <div id="ai-custom-report-block" class="hidden mt-6 pt-6 border-t border-slate-200">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-brand-600 font-bold">✨ التقرير الاستراتيجي الذكي المخصص:</span>
+                            <span class="text-xs font-semibold bg-brand-100 text-brand-800 px-2 py-0.5 rounded">Gemini API Active</span>
+                        </div>
+                        <div id="ai-report-content" class="text-xs text-slate-700 space-y-3 leading-relaxed whitespace-pre-line bg-white p-4 rounded-xl border border-slate-100 shadow-inner">
+                            <!-- AI text injected here -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BOS Daily Protocol Breakdown -->
+    <section id="protocol" class="bg-gradient-to-br from-slate-900 to-brand-950 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-brand-400 text-xs font-bold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full">هيكلية الإيقاع اليومي (BOS)</span>
+                <h2 class="text-3xl font-bold mt-4 mb-3">تفكيك بروتوكول الـ 45 دقيقة الصباحية</h2>
+                <p class="text-slate-400 text-sm sm:text-base">ترياق عملي متكامل يُطبق يومياً داخل كل قسم لبناء الذاكرة المستدامة وتعديل المسار السلوكي للأفراد في 3 خطوات عملية:</p>
+            </div>
+
+            <!-- Stepper Timeline -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
+                
+                <!-- Step 1 -->
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -top-6 -right-6 text-9xl font-bold text-white/5 select-none pointer-events-none">1</div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-10 h-10 rounded-full bg-brand-600/20 text-brand-400 flex items-center justify-center font-bold">05</span>
+                            <span class="text-xs font-bold text-brand-400 uppercase">دقائق أولى</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">التهيئة والمواءمة (Alignment)</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                            تفريغ المعوقات التشغيلية (Operational Clearance) عبر جلسة سريعة يكتب فيها كل موظف على ورقة بيضاء أو شاشة مشتركة عائقاً واحداً يشتت ذهنه، لزيادة التركيز وتهيئة الدماغ للعمل العميق.
+                        </p>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                        <span class="text-xs font-semibold block text-brand-300 mb-1">الهدف السلوكي:</span>
+                        <p class="text-xs text-slate-300">تقليل الإجهاد والضغط التنظيمي وإغلاق ملفات الذاكرة المؤقتة المعلقة (Attention Residue).</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white/5 border border-brand-500/30 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between shadow-lg shadow-brand-500/5">
+                    <div class="absolute -top-6 -right-6 text-9xl font-bold text-white/5 select-none pointer-events-none">2</div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-10 h-10 rounded-full bg-emerald-600/20 text-emerald-400 flex items-center justify-center font-bold">35</span>
+                            <span class="text-xs font-bold text-emerald-400 uppercase">دقيقة أساسية</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">التمرين التشغيلي (Main Workout)</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            تطبيق ثلاثي المراحل للصيانة المعرفية:
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2">⏱️ <strong>الاسترجاع (10د):</strong> مراجعة معيار قديم من الذاكرة لتقليص النسيان.</li>
+                            <li class="flex items-center gap-2">🚀 <strong>التوليد (10د):</strong> ربط الممارسة القديمة بحل مشكلة معاصرة.</li>
+                            <li class="flex items-center gap-2">🔄 <strong>الربط (15د):</strong> تدريب متقاطع مع تخصصات الأقسام الأخرى.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                        <span class="text-xs font-semibold block text-emerald-300 mb-1">الهدف السلوكي:</span>
+                        <p class="text-xs text-slate-300">مكافحة تآكل المعرفة وربط التدريب بالمنفعة والإنتاج المباشر.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -top-6 -right-6 text-9xl font-bold text-white/5 select-none pointer-events-none">3</div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-10 h-10 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold">05</span>
+                            <span class="text-xs font-bold text-amber-400 uppercase">دقائق أخيرة</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">التثبيت والمأسسة (Cool-Down)</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                            التوثيق السريع (Micro-Documentation). صياغة الفكرة الجديدة الناتجة في جملتين واضحتين فقط كـ "تحديث للممارسة"، ورفعها فوراً في منصة التواصل الداخلي للشركة (مثل Slack أو Teams).
+                        </p>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                        <span class="text-xs font-semibold block text-amber-300 mb-1">الهدف السلوكي:</span>
+                        <p class="text-xs text-slate-300">نقل الأفكار من مساحة العصف الذهني المؤقت إلى التطبيق المؤسسي المعتمد.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mini Live Timer Simulation -->
+            <div class="mt-12 bg-white/5 border border-white/10 p-6 rounded-2xl max-w-xl mx-auto">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <h4 class="text-sm font-bold text-white mb-1">مؤقت محاكاة جلسة BOS الصباحية</h4>
+                        <p class="text-xs text-slate-400">ابدأ المؤقت لمساعدتك أثناء إدارة جلسة الفريق الصباحية.</p>
+                    </div>
+                    <div class="flex items-center gap-3 shrink-0">
+                        <div class="text-2xl font-mono font-bold bg-slate-900 px-4 py-2 rounded-lg border border-white/10 text-emerald-400" id="timer-display">45:00</div>
+                        <button onclick="toggleBOSTimer()" id="timer-btn" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition duration-150">
+                            بدء المؤقت
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Generative Questions Generator Form -->
+    <section id="matrix" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold text-slate-900 mb-3">مولد ومصفوفة الأسئلة التوليدية الذكية</h2>
+            <p class="text-slate-500 text-sm sm:text-base">تحويل الإجراءات الورقية القديمة إلى حلول تشغيلية حية تعتمد على معادلة السؤال السلوكي المبتكرة وعقل الذكاء الاصطناعي.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Panel: Form & Logic -->
+            <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+                <div class="mb-6 pb-6 border-b border-slate-100">
+                    <span class="text-xs font-bold text-brand-600 uppercase bg-brand-50 px-2 py-1 rounded">المعادلة السلوكية المستعملة:</span>
+                    <div class="bg-slate-50 p-4 rounded-xl mt-3 text-xs leading-relaxed text-slate-700 font-mono text-center">
+                        السؤال التوليدي = [الممارسة القديمة] + [التحدي الحالي اليومي] + [طلب حل إجرائي سريع]
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-2">1. حدد القسم التشغيلي:</label>
+                        <select id="gen-dept" onchange="updateDeptDefaults()" class="w-full text-sm border border-slate-200 rounded-lg p-3 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            <option value="sales">المبيعات وخدمة العملاء</option>
+                            <option value="ops">العمليات واللوجستيات</option>
+                            <option value="tech">الدعم الفني والمساندة</option>
+                            <option value="marketing">التسويق وصناعة المحتوى</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-2">2. الممارسة القياسية المسترجعة:</label>
+                        <input type="text" id="gen-practice" class="w-full text-sm border border-slate-200 rounded-lg p-3 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="مثال: سياسة التعامل مع اعتراضات الأسعار">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-2">3. التحدي الفعلي اليومي الواجهناه حديثاً:</label>
+                        <input type="text" id="gen-challenge" class="w-full text-sm border border-slate-200 rounded-lg p-3 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="مثال: تواصل معنا بالأمس عميل يرفض عرض السعر الأخير">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-2">4. طلب الحل السريع والمستهدف:</label>
+                        <input type="text" id="gen-target" class="w-full text-sm border border-slate-200 rounded-lg p-3 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="مثال: إقناع العميل باستخدام الميزتين التنافسيتين للمنتج">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                        <button onclick="generateQuestion()" class="w-full bg-slate-900 text-white font-bold py-3 px-4 rounded-xl text-sm hover:bg-slate-800 transition shadow-sm">
+                            صياغة السؤال بالمعادلة التقليدية
+                        </button>
+                        <button id="ai-generate-q-btn" onclick="generateAIQuestion()" class="w-full bg-brand-600 text-white font-bold py-3 px-4 rounded-xl text-sm hover:bg-brand-700 transition shadow-sm flex items-center justify-center gap-2">
+                            <span>✨ توليد سؤال احترافي بالذكاء الاصطناعي</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Output Question Card -->
+            <div class="lg:col-span-5 bg-gradient-to-b from-slate-900 to-slate-950 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-6 pb-6 border-b border-white/10">
+                        <span class="text-xs font-bold text-brand-400">مخرجات السؤال التوليدي (BOS)</span>
+                        <span class="text-xl">💡</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                            <p class="text-xs text-slate-400 mb-2">صيغة السؤال التوليدي المقترح للفريق اليوم:</p>
+                            <blockquote class="text-base font-bold text-white leading-relaxed" id="output-q-text">
+                                "بناءً على سياسة الردود المعتمدة لدينا، كيف يمكننا استخدام (الميزتين التنافسيتين للمنتج) لإقناع العميل الرافض الذي تواصل معنا بالأمس؟"
+                            </blockquote>
+                        </div>
+                        <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-lg border border-emerald-500/20 text-xs">
+                            <strong>الهدف السلوكي للمدير:</strong> ربط السياسة المكتوبة في الدليل بحل مشكلات العمل الفعلية وإغلاق الصفقات أو تجاوز التعثر تشغيلياً على الفور.
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-4 border-t border-white/10 text-xs text-slate-500 text-center">
+                    قم بنسخ السؤال التوليدي ومشاركته في اجتماع الصباح
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Track Dashboard Simulator -->
+    <section id="tracker" class="bg-slate-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-600 text-xs font-bold uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full border border-brand-100">نموذج التتبع الرقمي</span>
+                <h2 class="text-3xl font-bold mt-4 mb-3">محاكي لوحة تتبع الانضباط والالتزام بالبروتوكول</h2>
+                <p class="text-slate-500 text-sm sm:text-base">لوحة متابعة ذكية للإدارة العليا لمراقبة الالتزام بنظام BOS على مستوى الأقسام تلقائياً عبر مربع الخيارات (Checkbox).</p>
+            </div>
+
+            <!-- High Level Summary Widgets -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Stat 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex items-center justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase">قسم المبيعات</span>
+                        <div class="text-2xl font-black text-slate-900 mt-1" id="stat-sales-days">18 من 21 يوم</div>
+                        <span class="inline-flex items-center gap-1 text-xs text-emerald-600 font-bold mt-2 bg-emerald-50 px-2 py-0.5 rounded" id="stat-sales-rate">85% - ممتاز ومستدام</span>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold">📈</div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex items-center justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase">قسم العمليات واللوجستيات</span>
+                        <div class="text-2xl font-black text-slate-900 mt-1" id="stat-ops-days">9 من 21 يوم</div>
+                        <span class="inline-flex items-center gap-1 text-xs text-red-600 font-bold mt-2 bg-red-50 px-2 py-0.5 rounded" id="stat-ops-rate">42% - متعثر وبطيء</span>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center text-xl font-bold">⚠️</div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex items-center justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase">معدل الانضباط الإجمالي للمنشأة</span>
+                        <div class="text-2xl font-black text-slate-900 mt-1" id="stat-total-rate">64%</div>
+                        <span class="text-xs text-slate-500 mt-2 block">مستوى استقرار العادات وبناء المنظمة المتعلمة</span>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl font-bold">🔄</div>
+                </div>
+            </div>
+
+            <!-- Main Table Section -->
+            <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden">
+                <div class="p-6 border-b border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-50/50">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">جدول التتبع التفصيلي التفاعلي (مثال: Sales_BOS)</h3>
+                        <p class="text-xs text-slate-500">جرب تفعيل أو إيقاف خانات الاختيار (الالتزام) بالأسفل لتشاهد تحديث البيانات الفوري في اللوحة أعلاه.</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-slate-400">مرحلة التطبيق:</span>
+                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2 py-1 rounded">21 يوماً تجريبية</span>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-right text-sm">
+                        <thead class="bg-slate-50 text-slate-500 text-xs font-bold border-b border-slate-100">
+                            <tr>
+                                <th class="px-6 py-4">اليوم</th>
+                                <th class="px-6 py-4">الممارسة القديمة المستهدفة بالصيانة</th>
+                                <th class="px-6 py-4">تحديث الممارسة الموثق (Micro-Doc)</th>
+                                <th class="px-6 py-4 text-center">الالتزام بالوقت (45 د)؟</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <!-- Row 1 -->
+                            <tr class="hover:bg-slate-50/50 transition">
+                                <td class="px-6 py-4 font-bold text-slate-900">اليوم 1</td>
+                                <td class="px-6 py-4">التعامل مع اعتراضات الأسعار المعتمدة</td>
+                                <td class="px-6 py-4 text-xs text-slate-500">تحديث مصفوفة الردود على اعتراض العميل بخصائص الضمان الإضافي.</td>
+                                <td class="px-6 py-4 text-center">
+                                    <input type="checkbox" checked onchange="updateTracker()" class="tracker-check w-5 h-5 rounded text-brand-600 focus:ring-brand-500 cursor-pointer">
+                                </td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr class="hover:bg-slate-50/50 transition">
+                                <td class="px-6 py-4 font-bold text-slate-900">اليوم 2</td>
+                                <td class="px-6 py-4">سياسة المتابعة بعد البيع (خدمة العملاء)</td>
+                                <td class="px-6 py-4 text-xs text-slate-500">تقليص وقت اتصال المتابعة إلى 48 ساعة بحد أقصى لمنع فقدان التواصل.</td>
+                                <td class="px-6 py-4 text-center">
+                                    <input type="checkbox" checked onchange="updateTracker()" class="tracker-check w-5 h-5 rounded text-brand-600 focus:ring-brand-500 cursor-pointer">
+                                </td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr class="hover:bg-slate-50/50 transition">
+                                <td class="px-6 py-4 font-bold text-slate-900">اليوم 3</td>
+                                <td class="px-6 py-4">آلية استقبال الشكاوى والاعتراضات الفنية</td>
+                                <td class="px-6 py-4 text-xs text-slate-500">ربط نظام التذاكر مباشرة بمسؤول الدعم الفني دون اللجوء للمراسلات الورقية.</td>
+                                <td class="px-6 py-4 text-center">
+                                    <input type="checkbox" onchange="updateTracker()" class="tracker-check w-5 h-5 rounded text-brand-600 focus:ring-brand-500 cursor-pointer">
+                                </td>
+                            </tr>
+                            <!-- Row 4 -->
+                            <tr class="hover:bg-slate-50/50 transition">
+                                <td class="px-6 py-4 font-bold text-slate-900">اليوم 4</td>
+                                <td class="px-6 py-4">دليل ترحيب وتأهيل الموظفين الجدد</td>
+                                <td class="px-6 py-4 text-xs text-slate-500">إضافة قائمة مرجعية تفاعلية للتأهيل في أول 3 أيام لتقليص مدة التعلم.</td>
+                                <td class="px-6 py-4 text-center">
+                                    <input type="checkbox" checked onchange="updateTracker()" class="tracker-check w-5 h-5 rounded text-brand-600 focus:ring-brand-500 cursor-pointer">
+                                </td>
+                            </tr>
+                            <!-- Row 5 -->
+                            <tr class="hover:bg-slate-50/50 transition">
+                                <td class="px-6 py-4 font-bold text-slate-900">اليوم 5</td>
+                                <td class="px-6 py-4">بروتوكول التفاوض وحجز العروض الكبرى</td>
+                                <td class="px-6 py-4 text-xs text-slate-500">تطبيق معيار التدريب المتقاطع لتوجيه مسؤول المبيعات المساعد للمساندة.</td>
+                                <td class="px-6 py-4 text-center">
+                                    <input type="checkbox" onchange="updateTracker()" class="tracker-check w-5 h-5 rounded text-brand-600 focus:ring-brand-500 cursor-pointer">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="p-6 bg-slate-50 border-t border-slate-100 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <span>* لوحة تحكم تفاعلية تحاكي جداول بيانات Google Sheets</span>
+                    <span>تحديث البيانات لحظي وتلقائي</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation and Bootcamp Roadmap (21 Days) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <!-- Bootcamp Description -->
+            <div>
+                <span class="text-brand-600 text-xs font-bold tracking-widest uppercase bg-brand-50 px-3 py-1 rounded-full">دليل تفعيل الأداء العالي للمدراء</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-4 mb-6">برنامج تمكين المدراء لتطبيق BOS بنجاح</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    الهدف الأساسي من تدريب وتأهيل المدراء ليس فرض عبء أو اجتماع إداري إضافي، بل تمكينهم من أداة حقيقية توفر 50% من جهود المتابعة وتمنع ارتكاب الأخطاء التشغيلية المتكررة.
+                </p>
+
+                <div class="space-y-4 mb-8">
+                    <!-- Rule 1 -->
+                    <div class="flex gap-4 p-4 rounded-xl border border-slate-200 hover:border-slate-300 transition duration-150 bg-white">
+                        <span class="text-2xl shrink-0">⏱️</span>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900 mb-1">قاعدة الوقت الصارمة</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">ينتهي اللقاء فوراً بانتهاء الـ 45 دقيقة المخصصة، حتى لو لم يكتمل النقاش، وذلك لتثبيت الاحترام التنظيمي لأهمية الوقت.</p>
+                        </div>
+                    </div>
+                    <!-- Rule 2 -->
+                    <div class="flex gap-4 p-4 rounded-xl border border-slate-200 hover:border-slate-300 transition duration-150 bg-white">
+                        <span class="text-2xl shrink-0">🚶‍♂️</span>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900 mb-1">الوقوف المستمر (Daily Standup)</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">يُفضل أداء فعاليات البروتوكول بالوقوف، مما يضمن تدفق الأفكار، والسرعة، والتركيز العالي، ويتجنب رتابة الاجتماعات المكتبية المعتادة.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW GEMINI API FEATURE: AI Micro-Coaching Assistant for Managers -->
+                <div class="bg-gradient-to-br from-brand-600 to-brand-800 text-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-xl">🧠</span>
+                        <h3 class="text-md font-bold">✨ مستشار الكوتشينج ومكافحة المقاومة السلوكية للمدراء</h3>
+                    </div>
+                    <p class="text-xs text-brand-100 mb-4 leading-relaxed">
+                        هل تواجه مقاومة من فريقك لتطبيق بروتوكول الـ BOS؟ أو مشاكل في الالتزام بالـ 45 دقيقة؟ اطرح المشكلة وسيقدم لك مستشار الذكاء الاصطناعي كبسولة حلول سريعة قائمة على دليل أماني الفريدي.
+                    </p>
+                    <div class="space-y-3">
+                        <select id="coaching-obstacle" class="w-full text-xs text-slate-800 border-none rounded-lg p-2.5 bg-white focus:ring-2 focus:ring-brand-400">
+                            <option value="time">الموظفون يتأخرون في الحضور أو لا نلتزم بالـ 45 دقيقة ويمتد الاجتماع</option>
+                            <option value="resistance">الفريق يرى أن هذا البروتوكول عبء إضافي واجتماع بيروقراطي مكرر</option>
+                            <option value="forgetting">يسترجع الموظفون الإجراء ولكنهم ينسون تطبيقه في المهام الفعلية اليومية</option>
+                            <option value="custom">سأكتب تحدياً سلوكياً خاصاً بي في الحقل أدناه...</option>
+                        </select>
+                        <input type="text" id="coaching-custom-input" class="w-full text-xs text-slate-800 border-none rounded-lg p-2.5 bg-white focus:ring-2 focus:ring-brand-400 hidden" placeholder="اكتب التحدي السلوكي هنا بالتفصيل...">
+                        <button id="ai-coaching-btn" onclick="askAICoach()" class="w-full bg-slate-900 hover:bg-slate-950 text-white font-bold py-2 px-4 rounded-xl text-xs transition duration-150 flex items-center justify-center gap-2">
+                            <span>✨ احصل على توجيه الكوتشينج السلوكي</span>
+                        </button>
+                    </div>
+
+                    <div id="ai-coaching-error" class="hidden mt-3 p-2 bg-red-500/20 text-white text-xs rounded border border-red-500/30"></div>
+
+                    <div id="ai-coaching-response-card" class="hidden mt-4 p-4 rounded-xl bg-white/10 border border-white/20 text-xs">
+                        <p class="font-bold text-brand-200 mb-2">توجيه كوتش الأداء المعتمد:</p>
+                        <p id="ai-coaching-response-text" class="text-slate-100 leading-relaxed whitespace-pre-line"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agenda Visual Card -->
+            <div class="bg-gradient-to-br from-slate-900 to-brand-950 text-white rounded-3xl p-8 border border-slate-800 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.15),transparent_45%)]"></div>
+                <div class="relative z-10">
+                    <h3 class="text-xl font-bold mb-6 pb-4 border-b border-white/10">أجندة الورشة التأهيلية التنفيذية (120 دقيقة)</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Agenda Item 1 -->
+                        <div class="flex items-start gap-4">
+                            <span class="bg-white/10 text-brand-300 px-2.5 py-1 rounded text-xs font-mono shrink-0 font-bold">20 د</span>
+                            <div>
+                                <h4 class="text-sm font-bold">الافتتاحية وكسر الجمود: "مواجهة النزيف"</h4>
+                                <p class="text-xs text-slate-400 mt-1 leading-relaxed">استعراض وتحليل نتائج تقرير ملف المنشأة التشخيصي، وتوضيح الخسائر المعنوية والمادية الناتجة عن تشتت الالتزام والـ Switching Costs.</p>
+                            </div>
+                        </div>
+
+                        <!-- Agenda Item 2 -->
+                        <div class="flex items-start gap-4">
+                            <span class="bg-brand-600 text-white px-2.5 py-1 rounded text-xs font-mono shrink-0 font-bold">70 د</span>
+                            <div>
+                                <h4 class="text-sm font-bold text-brand-300">محاكاة حية وتفكيك بروتوكول الـ 45 دقيقة</h4>
+                                <p class="text-xs text-slate-400 mt-1 leading-relaxed">تطبيق البروتوكول عملياً داخل القاعة؛ يتقمص المدراء دور الموظفين ويقود المدرب الجلسة كاملة (التفريغ، التمرين الثلاثي، وتحديث الـ Micro-Doc).</p>
+                            </div>
+                        </div>
+
+                        <!-- Agenda Item 3 -->
+                        <div class="flex items-start gap-4">
+                            <span class="bg-white/10 text-brand-300 px-2.5 py-1 rounded text-xs font-mono shrink-0 font-bold">30 د</span>
+                            <div>
+                                <h4 class="text-sm font-bold">إدارة مقاومة التغيير وكبسولة الاستدامة</h4>
+                                <p class="text-xs text-slate-400 mt-1 leading-relaxed">مناقشة وتفنيد المخاوف الشائعة للمدراء حول استهلاك الوقت وتزويدهم بالقواعد الذهبية الأربعة لحماية الطقس اليومي الجديد.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Summary Message -->
+    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-bold mb-4">التميز المستدام ليس حدثاً مؤقتاً، بل روتين يومي منضبط</h3>
+            <p class="text-slate-400 text-sm max-w-2xl mx-auto leading-relaxed mb-8">
+                إن بناء "المنظمة المتعلمة" التي تكافح الركود وتتغلب على الزهايمر التنظيمي لا يتطلب ميزانيات ضخمة، بل يتطلب شجاعة الاستمرار والانضباط الإجرائي اليومي في 45 دقيقة صباحية فقط.
+            </p>
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>© 2026 دليل التميز التشغيلي والسلوكي (BOS). جميع الحقوق محفوظة.</p>
+                <div class="flex items-center gap-4">
+                    <span>إعداد وتصميم: أماني الفريدي</span>
+                    <a href="https://www.linkedin.com/in/amani-al-freidi" target="_blank" class="hover:text-white transition font-medium">LinkedIn Profile</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // ==========================================
+        // GEMINI API UTILITIES & PROTOCOL (Rule 3)
+        // ==========================================
+        async function callGeminiAPI(prompt, systemInstruction = '') {
+            const apiKey = ""; // Kept empty as per environment variables runtime injected
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }]
+            };
+            if (systemInstruction) {
+                payload.systemInstruction = { parts: [{ text: systemInstruction }] };
+            }
+
+            // Exponential backoff implementation (retry up to 5 times)
+            let delay = 1000;
+            for (let i = 0; i < 5; i++) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        return data.candidates?.[0]?.content?.parts?.[0]?.text;
+                    }
+                } catch (error) {
+                    // Do not log retry failures to console as per core guidelines
+                }
+                await new Promise(resolve => setTimeout(resolve, delay));
+                delay *= 2;
+            }
+            throw new Error("عذراً، لم نتمكن من الاتصال بـ Gemini الذكي بعدة محاولات. يرجى مراجعة إعدادات الشبكة وإعادة المحاولة لاحقاً.");
+        }
+
+        // ==========================================
+        // 1. Diagnostic Score & AI Diagnostic Report
+        // ==========================================
+        function calculateDiagnosticScore(showReportBlock = false) {
+            const questions = ['q1', 'q2', 'q3', 'q4'];
+            let totalScore = 0;
+            let answeredCount = 0;
+
+            questions.forEach(q => {
+                const checked = document.querySelector(`input[name="${q}"]:checked`);
+                if (checked) {
+                    totalScore += parseInt(checked.value);
+                    answeredCount++;
+                }
+            });
+
+            if (answeredCount < 4) {
+                const container = document.getElementById('survey-container');
+                let alertBox = document.getElementById('diagnostic-alert');
+                if (!alertBox) {
+                    alertBox = document.createElement('div');
+                    alertBox.id = 'diagnostic-alert';
+                    alertBox.className = 'bg-red-50 text-red-700 text-xs p-3 rounded-lg border border-red-200 mt-4 font-bold text-center';
+                    alertBox.textContent = 'الرجاء الإجابة على جميع الأسئلة الأربعة لتوليد تقييم صحيح.';
+                    container.appendChild(alertBox);
+                }
+                return null;
+            }
+
+            const alertBox = document.getElementById('diagnostic-alert');
+            if (alertBox) alertBox.remove();
+
+            const avgScore = (totalScore / answeredCount).toFixed(1);
+            const resultCard = document.getElementById('result-card');
+            const scoreText = document.getElementById('result-score-text');
+            const statusEmoji = document.getElementById('result-status-emoji');
+            const statusTitle = document.getElementById('result-status-title');
+            const statusDesc = document.getElementById('result-status-desc');
+
+            resultCard.classList.remove('hidden');
+            scoreText.textContent = `${avgScore} / 5.0`;
+
+            if (avgScore >= 4.0) {
+                resultCard.className = "mt-8 p-6 rounded-2xl border border-emerald-200 bg-emerald-50 text-emerald-950 transition duration-300";
+                statusEmoji.textContent = "🏆";
+                statusTitle.textContent = "التصنيف: نقطة قوة مؤسسية (Organizational Superpower)";
+                statusDesc.textContent = "تمتلك منشأتك ثقافة مرنة وتوافقاً مميزاً. حافظ على هذه الممارسات المكتوبة كمعايير ذهبية واحرص على تجنب تسلّل أي تراخٍ تدريجي إليها.";
+            } else if (avgScore >= 3.0) {
+                resultCard.className = "mt-8 p-6 rounded-2xl border border-amber-200 bg-amber-50 text-amber-950 transition duration-300";
+                statusEmoji.textContent = "⚙️";
+                statusTitle.textContent = "التصنيف: منطقة تذبذب واحتكاك (Operational Friction)";
+                statusDesc.textContent = "الأداء متذبذب وغير مستقر. يتأرجح الموظفون بين فترات الانضباط العالي والعودة للروتين. البدء بتطبيق بروتوكول BOS فوراً سيوحد سلوك الأداء العام.";
+            } else {
+                resultCard.className = "mt-8 p-6 rounded-2xl border border-red-200 bg-red-50 text-red-950 transition duration-300";
+                statusEmoji.textContent = "⚠️";
+                statusTitle.textContent = "التصنيف: فجوة تشغيلية وسلوكية خطيرة (Performance Bottleneck)";
+                statusDesc.textContent = "المنشأة تعاني من تكلس حاد في العمليات وتشتت ملحوظ في تدفق المعلومات وضياع المعرفة المؤسسية. يتطلب الوضع تدخلاً فورياً لإعادة ضبط إيقاع المواءمة.";
+            }
+
+            if (!showReportBlock) {
+                document.getElementById('ai-custom-report-block').classList.add('hidden');
+            }
+
+            return avgScore;
+        }
+
+        // AI Strategic Diagnosis using Gemini API
+        async function generateAIDiagnosticReport() {
+            const avgScore = calculateDiagnosticScore(true);
+            if (!avgScore) return; // Prompt user to fill questions first
+
+            const customChallenge = document.getElementById('diag-custom-challenge').value;
+            const errorBox = document.getElementById('ai-error-message');
+            errorBox.classList.add('hidden');
+
+            const reportBlock = document.getElementById('ai-custom-report-block');
+            const reportContent = document.getElementById('ai-report-content');
+            const aiBtn = document.getElementById('ai-diagnose-btn');
+
+            reportBlock.classList.remove('hidden');
+            reportContent.innerHTML = `
+                <div class="flex items-center gap-2 text-brand-600 font-bold animate-pulse">
+                    <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                    </svg>
+                    <span>جاري تحليل البيانات وصياغة خطتك الاستراتيجية بالذكاء الاصطناعي...</span>
+                </div>
+            `;
+            aiBtn.disabled = true;
+
+            const sysInstruction = "أنت مستشار خبير في تطوير الأداء والموارد البشرية، متمرس في دمج العلوم العصبية السلوكية مع الإدارة الرشيقة للمنشآت الصغيرة والمتوسطة (SMEs). تساعد في مكافحة الزهايمر المؤسسي وتكلس الروتين.";
+            const prompt = `
+                لقد أجرت منشأة صغيرة/متوسطة استبيان التشخيص الذاتي لـ نظام BOS السلوكي، وحصلت على تقييم متوسط يبلغ: ${avgScore} من أصل 5.0.
+                
+                وكان التحدي التشغيلي السري المكتوب من قبل العميل كالتالي:
+                "${customChallenge || 'لا يوجد تحدي مخصص مكتوب، يرجى تقديم توجيه عام للمنشأة بناءً على نتيجتها'}"
+
+                بناءً على دليل الأستاذة أماني الفريدي ونظرية "المرونة العصبية التنظيمية" ومكافحة منحنى النسيان:
+                1. قم بتقديم تحليل فوري وموجز لواقع هذه المنشأة السلوكي بناءً على النتيجة السابقة.
+                2. حلل التحدي المكتوب واقترح له حلاً سلوكياً في نقاط عملية قصيرة مستمداً من "بروتوكول الـ 45 دقيقة الصباحية".
+                3. اعط نصيحة ذهبية واحدة للمدراء لبناء الاستمرارية لمدة 21 يوماً.
+                
+                اجعل النبرة ودودة ومستشيرة ومهنية للغاية وباللغة العربية الفصحى الأنيقة.
+            `;
+
+            try {
+                const response = await callGeminiAPI(prompt, sysInstruction);
+                reportContent.textContent = response;
+            } catch (error) {
+                errorBox.textContent = error.message || "حدث خطأ غير متوقع أثناء توليد التقرير.";
+                errorBox.classList.remove('hidden');
+                reportBlock.classList.add('hidden');
+            } finally {
+                aiBtn.disabled = false;
+            }
+        }
+
+        // ==========================================
+        // 2. Interactive Generator Defaults mapping
+        // ==========================================
+        const deptDefaults = {
+            sales: {
+                practice: "سياسة التعامل مع اعتراضات الأسعار المعتمدة",
+                challenge: "تواصل معنا بالأمس عميل يبدي اعتراضاً كبيراً على عرض السعر الأخير",
+                target: "إقناع العميل بالتركيز على ميزتين تنافسيتين تميزان المنتج عن غيره من المنافسين"
+            },
+            ops: {
+                practice: "معيار التحقق المزدوج قبل تسليم الخدمات والشحنات",
+                challenge: "حدوث تأخير أو تسليم خاطئ لأحد الطرود الأسبوع الماضي أثار شكوى العميل",
+                target: "مراجعة العيوب والممارسات لمنع تكرار الخطأ وتأسيس وقاية مستدامة"
+            },
+            tech: {
+                practice: "بروتوكول حل المشاكل التقنية وإعادة تعيين الحسابات",
+                challenge: "تلقي ضغط هائل من تذاكر الدعم الفني المتعلقة بكلمات المرور المفقودة",
+                target: "تبسيط الخطوات في الدليل لتسهيل إقناع العميل بحل المشكلة ذاتياً في دقيقة"
+            },
+            marketing: {
+                practice: "دليل نبرة الصوت المعتمد للتواصل مع الجمهور",
+                challenge: "ظهور تعليق أو تغريدة سلبية من منافس على منصات التواصل الاجتماعي",
+                target: "صياغة رد مهني يتماشى مع قيم المؤسسة ونبرتها الرسمية دون انفعال"
+            }
+        };
+
+        function updateDeptDefaults() {
+            const dept = document.getElementById('gen-dept').value;
+            const defaults = deptDefaults[dept];
+            if (defaults) {
+                document.getElementById('gen-practice').value = defaults.practice;
+                document.getElementById('gen-challenge').value = defaults.challenge;
+                document.getElementById('gen-target').value = defaults.target;
+            }
+        }
+
+        // Initialize defaults
+        updateDeptDefaults();
+
+        // Traditional formulaic output
+        function generateQuestion() {
+            const practice = document.getElementById('gen-practice').value || "سياسة العمل المعيارية";
+            const challenge = document.getElementById('gen-challenge').value || "التحدي الذي يواجهنا";
+            const target = document.getElementById('gen-target').value || "الحل السريع";
+            
+            const generatedText = `«بناءً على إجراء (${practice}) المعتمد لدينا، وبما أننا واجهنا مؤخراً تحدي (${challenge})؛ كيف يمكننا توظيف خطوات السياسة لتحقيق (${target}) فوراً وبأقل مجهود اليوم؟»`;
+            document.getElementById('output-q-text').textContent = generatedText;
+        }
+
+        // AI Generated Question Builder via Gemini API
+        async function generateAIQuestion() {
+            const dept = document.getElementById('gen-dept').value;
+            const practice = document.getElementById('gen-practice').value;
+            const challenge = document.getElementById('gen-challenge').value;
+            const target = document.getElementById('gen-target').value;
+            const aiBtn = document.getElementById('ai-generate-q-btn');
+            const outputBox = document.getElementById('output-q-text');
+
+            if (!practice || !challenge || !target) {
+                outputBox.textContent = "الرجاء تعبئة حقول الممارسة والتحدي والمستهدف أولاً للتوليد الذكي.";
+                return;
+            }
+
+            const originalText = aiBtn.innerHTML;
+            aiBtn.innerHTML = `<span>⏳ جاري الابتكار الذكي...</span>`;
+            aiBtn.disabled = true;
+
+            const sysInstruction = "أنت خبير كوتشينج وصياغة أسئلة توليدية لفرق العمل (Generative Questions) تدعم التفكير النقدي وصيانة المعرفة.";
+            const prompt = `
+                قسم الشركة هو: ${dept}.
+                الممارسة الورقية القديمة المسترجعة من الذاكرة: "${practice}".
+                التحدي التشغيلي الفعلي اليومي: "${challenge}".
+                الهدف والحل الإجرائي المستهدف تحقيقه: "${target}".
+
+                قم بصياغة "سؤال توليدي ذكي" (Generative Question) واحد ومبهر موجه للموظفين في بداية اجتماع الصباح (Daily Standup) بناءً على معادلة الإيقاع السلوكي لـ BOS:
+                صيغة السؤال التوليدي المقترح للفريق اليوم: [اكتب السؤال السلوكي والابتكاري هنا، واجعله يدمج ببراعة المعرفة القديمة بالمشكلة الحالية للعميل اليوم لتحفيز عقولهم على ابتكار حلول سريعة في أقل من دقيقة]
+                
+                اكتب السؤال مباشرة داخل علامتي تنصيص دون أي مقدمات أو شروحات إضافية.
+            `;
+
+            try {
+                const response = await callGeminiAPI(prompt, sysInstruction);
+                outputBox.textContent = response.replace(/^"|"$/g, ''); // Clean double quotes if any
+            } catch (error) {
+                outputBox.textContent = "فشل توليد السؤال بالذكاء الاصطناعي: " + error.message;
+            } finally {
+                aiBtn.innerHTML = originalText;
+                aiBtn.disabled = false;
+            }
+        }
+
+        // ==========================================
+        // 3. AI Micro-Coaching Logic
+        // ==========================================
+        // Toggle custom text field based on selection
+        document.getElementById('coaching-obstacle').addEventListener('change', function() {
+            const customInput = document.getElementById('coaching-custom-input');
+            if (this.value === 'custom') {
+                customInput.classList.remove('hidden');
+            } else {
+                customInput.classList.add('hidden');
+            }
+        });
+
+        async function askAICoach() {
+            const selectValue = document.getElementById('coaching-obstacle').value;
+            const customInputVal = document.getElementById('coaching-custom-input').value;
+            const errorBox = document.getElementById('ai-coaching-error');
+            const responseCard = document.getElementById('ai-coaching-response-card');
+            const responseText = document.getElementById('ai-coaching-response-text');
+            const btn = document.getElementById('ai-coaching-btn');
+
+            errorBox.classList.add('hidden');
+            
+            let obstacleText = "";
+            if (selectValue === 'time') {
+                obstacleText = "الموظفون يتأخرون في الحضور أو لا يلتزمون بحد الـ 45 دقيقة الصارمة ويمتد الاجتماع رغماً عنهم.";
+            } else if (selectValue === 'resistance') {
+                obstacleText = "يرى الفريق أن هذا البروتوكول عبء تشغيلي إضافي واجتماع روتيني مكرر لا فائدة حقيقية مرجوة منه.";
+            } else if (selectValue === 'forgetting') {
+                obstacleText = "يسترجع الموظفون السياسة بنجاح أثناء التمرين ولكنهم يرجعون للنسيان والروتين أثناء مهام العمل الفعلية اليومية.";
+            } else {
+                obstacleText = customInputVal;
+                if (!obstacleText) {
+                    errorBox.textContent = "الرجاء كتابة التحدي السلوكي المخصص في الحقل.";
+                    errorBox.classList.remove('hidden');
+                    return;
+                }
+            }
+
+            const originalBtnText = btn.innerHTML;
+            btn.innerHTML = `<span>⏳ جاري صياغة التوجيه الاستشاري...</span>`;
+            btn.disabled = true;
+            responseCard.classList.remove('hidden');
+            responseText.innerHTML = "جاري تصفح دليل التميز السلوكي (BOS)...";
+
+            const sysInstruction = "أنت مستشار كوتشينج إداري وتطوير سلوكي متقن لدليل BOS ومفاهيم العلوم العصبية المعرفية للتخلص من الزهايمر المؤسسي وتكلس المنشآت الصغيرة والمتوسطة.";
+            const prompt = `
+                أنا مدير قسم في منشأة عريقة أطبق نظام BOS، وأواجه التحدي والمقاومة التالية من فريقي:
+                "${obstacleText}"
+
+                كيف يمكنني قيادة وتيسير التغيير وحل هذه العقبة السلوكية؟ 
+                اكتب لي كبسولة توجيهية استشارية من كوتش الأداء تتضمن:
+                1. تحليل سريع للسبب السلوكي وراء هذه المقاومة (من منظور علم الأعصاب الإداري).
+                2. خطوتان سريعتان وعمليتان جداً (Tactical Micro-Actions) يمكنني تطبيقهما مع الفريق غداً للتغلب على هذه المشكلة وبناء عادة الاستمرار.
+                
+                اجعل الأسلوب تحفيزياً، ومباشراً، ومحدداً بنقاط واضحة جداً ومختصرة لتوفير وقت المدراء.
+            `;
+
+            try {
+                const response = await callGeminiAPI(prompt, sysInstruction);
+                responseText.textContent = response;
+            } catch (error) {
+                errorBox.textContent = error.message;
+                errorBox.classList.remove('hidden');
+                responseCard.classList.add('hidden');
+            } finally {
+                btn.innerHTML = originalBtnText;
+                btn.disabled = false;
+            }
+        }
+
+        // ==========================================
+        // 4. Simulated Track and Day update
+        // ==========================================
+        function updateTracker() {
+            const checkboxes = document.querySelectorAll('.tracker-check');
+            let checkedCount = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) checkedCount++;
+            });
+
+            // Standardize simulated calculations (assume total 5 rows present in the table simulation)
+            const salesDaysCompleted = 15 + checkedCount; // baseline 15 days + interactive checks
+            const salesRate = Math.round((salesDaysCompleted / 21) * 100);
+
+            // Update Sales Widgets
+            document.getElementById('stat-sales-days').textContent = `${salesDaysCompleted} من 21 يوم`;
+            
+            const salesRateWidget = document.getElementById('stat-sales-rate');
+            salesRateWidget.textContent = `${salesRate}% - ${salesRate >= 80 ? 'ممتاز ومستدام' : 'يحتاج لمتابعة وضبط'}`;
+            if (salesRate >= 80) {
+                salesRateWidget.className = "inline-flex items-center gap-1 text-xs text-emerald-600 font-bold mt-2 bg-emerald-50 px-2 py-0.5 rounded";
+            } else {
+                salesRateWidget.className = "inline-flex items-center gap-1 text-xs text-amber-600 font-bold mt-2 bg-amber-50 px-2 py-0.5 rounded";
+            }
+
+            // Calculate overall total score (Sales rate + Ops rate fixed at 42%)
+            const totalRate = Math.round((salesRate + 42) / 2);
+            document.getElementById('stat-total-rate').textContent = `${totalRate}%`;
+        }
+
+        // ==========================================
+        // 5. Timer Simulator Logic
+        // ==========================================
+        let timerInterval = null;
+        let timerSeconds = 45 * 60; // 45 minutes
+
+        function toggleBOSTimer() {
+            const btn = document.getElementById('timer-btn');
+            const display = document.getElementById('timer-display');
+
+            if (timerInterval) {
+                // Pause
+                clearInterval(timerInterval);
+                timerInterval = null;
+                btn.textContent = "استئناف المؤقت";
+                btn.className = "bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition duration-150";
+            } else {
+                // Start / Resume
+                btn.textContent = "إيقاف مؤقت";
+                btn.className = "bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition duration-150";
+                
+                timerInterval = setInterval(() => {
+                    if (timerSeconds <= 0) {
+                        clearInterval(timerInterval);
+                        timerInterval = null;
+                        display.textContent = "00:00";
+                        btn.textContent = "انتهت الجلسة";
+                        btn.disabled = true;
+                        return;
+                    }
+                    timerSeconds--;
+                    const minutes = Math.floor(timerSeconds / 60);
+                    const seconds = timerSeconds % 60;
+                    display.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>
