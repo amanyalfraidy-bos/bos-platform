@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل التميز التشغيلي والسلوكي للمنشآت (BOS) - الإصدار الثاني</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#030712',
+                        },
+                        accent: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md shadow-brand-600/20">
+                    BOS
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-slate-900 leading-tight">دليل التميز التشغيلي والسلوكي</h1>
+                    <p class="text-xs text-brand-600 font-semibold">AI-HR Copilot Suite • الإصدار 2.0</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <span class="bg-brand-50 text-brand-700 text-xs px-3 py-1.5 rounded-full font-bold border border-brand-100">مطور ومدمج بالذكاء الاصطناعي</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Welcome Banner -->
+        <div class="bg-gradient-to-l from-brand-900 via-brand-800 to-slate-900 text-white rounded-2xl p-6 sm:p-8 mb-8 shadow-lg relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="relative z-10 max-w-3xl">
+                <span class="bg-blue-500/20 text-blue-300 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/30 uppercase tracking-wider">جاهز للمشاركة المباشرة</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold mt-3 leading-tight">أهلاً بك في البوابة التفاعلية لإدارة التميز السلوكي</h2>
+                <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
+                    هذا الملف هو نسخة تطبيقية تفاعلية مصممة خصيصاً للمدراء ومسؤولي الموارد البشرية لرفع مستويات الانضباط، التحفيز الذاتي، وبناء العادات المهنية الإيجابية باستخدام أدوات الذكاء الاصطناعي المباشرة.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tab Selection for AI HR Copilot Suite -->
+        <div class="mb-8">
+            <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                مجموعة أدوات AI-HR Copilot Suite الذكية
+            </h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                <button onclick="switchTab('retention')" id="btn-retention" class="tab-btn bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 p-4 rounded-xl text-right transition duration-200 flex flex-col justify-between h-32 hover:border-brand-300 shadow-sm">
+                    <span class="p-2 bg-red-50 text-red-600 rounded-lg w-fit"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg></span>
+                    <div>
+                        <div class="font-bold text-xs text-slate-500">الأداة الأولى</div>
+                        <div class="font-bold text-sm text-slate-900 mt-0.5">التنبؤ بالاستقالة الصامتة</div>
+                    </div>
+                </button>
+
+                <button onclick="switchTab('habits')" id="btn-habits" class="tab-btn bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 p-4 rounded-xl text-right transition duration-200 flex flex-col justify-between h-32 hover:border-brand-300 shadow-sm">
+                    <span class="p-2 bg-emerald-50 text-emerald-600 rounded-lg w-fit"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg></span>
+                    <div>
+                        <div class="font-bold text-xs text-slate-500">الأداة الثانية</div>
+                        <div class="font-bold text-sm text-slate-900 mt-0.5">مخطط بناء العادات (21 يوماً)</div>
+                    </div>
+                </button>
+
+                <button onclick="switchTab('coaching')" id="btn-coaching" class="tab-btn bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 p-4 rounded-xl text-right transition duration-200 flex flex-col justify-between h-32 hover:border-brand-300 shadow-sm">
+                    <span class="p-2 bg-blue-50 text-blue-600 rounded-lg w-fit"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></span>
+                    <div>
+                        <div class="font-bold text-xs text-slate-500">الأداة الثالثة</div>
+                        <div class="font-bold text-sm text-slate-900 mt-0.5">مساعد الكوتشينج السلوكي</div>
+                    </div>
+                </button>
+
+                <button onclick="switchTab('training')" id="btn-training" class="tab-btn bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 p-4 rounded-xl text-right transition duration-200 flex flex-col justify-between h-32 hover:border-brand-300 shadow-sm">
+                    <span class="p-2 bg-amber-50 text-amber-600 rounded-lg w-fit"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg></span>
+                    <div>
+                        <div class="font-bold text-xs text-slate-500">الأداة الرابعة</div>
+                        <div class="font-bold text-sm text-slate-900 mt-0.5">منشئ خطة التدريب المتقاطع</div>
+                    </div>
+                </button>
+
+                <button onclick="switchTab('motivation')" id="btn-motivation" class="tab-btn bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 p-4 rounded-xl text-right transition duration-200 flex flex-col justify-between h-32 hover:border-brand-300 shadow-sm">
+                    <span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg w-fit"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg></span>
+                    <div>
+                        <div class="font-bold text-xs text-slate-500">الأداة الخامسة</div>
+                        <div class="font-bold text-sm text-slate-900 mt-0.5">مولّد الرسائل التحفيزية</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- AI Engine Container (Interactive Sections) -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 mb-8 shadow-sm">
+            
+            <!-- Tab 1: Retention Analytics -->
+            <div id="tab-content-retention" class="tab-pane hidden">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center text-red-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg></div>
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-900">محاكي التنبؤ بالاستقالة الصامتة (Quiet Quitting Simulator)</h4>
+                        <p class="text-xs text-slate-500">تحليل السلوكيات والمؤشرات للتنبؤ بانسحاب الموظف النفسي ووضع حلول استباقية</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">اسم الموظف أو المسمى الوظيفي (اختياري)</label>
+                            <input type="text" id="retention-emp-name" placeholder="مثال: أخصائي مبيعات" class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">الملاحظات السلوكية المرصودة (أو الأعراض)</label>
+                            <textarea id="retention-behaviors" rows="4" placeholder="اكتب الملاحظات المرصودة مثل: تجنب حضور الاجتماعات، التوقف عن تقديم مبادرات، تأخر طفيف في تسليم المهام..." class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm"></textarea>
+                        </div>
+                        <button onclick="runRetentionAnalysis()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition duration-150 text-sm flex items-center justify-center gap-2">
+                            <span>تحليل الحالة والتنبؤ بالحلول</span>
+                        </button>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col min-h-[250px]">
+                        <span class="text-xs font-bold text-slate-400 mb-2">مخرجات التحليل والذكاء الاصطناعي:</span>
+                        <div id="retention-result" class="text-sm text-slate-600 leading-relaxed overflow-y-auto whitespace-pre-line">قم بملء البيانات السلوكية والضغط على زر التحليل للبدء...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Habit Builder -->
+            <div id="tab-content-habits" class="tab-pane hidden">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg></div>
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-900">مخطط بناء العادات والامتثال السلوكي (21 يوماً)</h4>
+                        <p class="text-xs text-slate-500">صياغة مسار سلوكي متدرج ومحفز لبناء عادة عمل إيجابية داخل الفريق</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">العادة السلوكية المراد بناؤها</label>
+                            <input type="text" id="habit-target" placeholder="مثال: الالتزام بالتوثيق اليومي للمهام على الأداة المشتركة" class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">التحديات الحالية المتوقعة لدى الموظف</label>
+                            <input type="text" id="habit-challenge" placeholder="مثال: ضيق الوقت في نهاية اليوم العملي، نسيان الخطوات" class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm">
+                        </div>
+                        <button onclick="generateHabitPlan()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition duration-150 text-sm flex items-center justify-center gap-2">
+                            <span>إنشاء برنامج الـ 21 يوماً السلوكي</span>
+                        </button>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col min-h-[250px]">
+                        <span class="text-xs font-bold text-slate-400 mb-2">مخطط العادات التدريجي:</span>
+                        <div id="habits-result" class="text-sm text-slate-600 leading-relaxed overflow-y-auto whitespace-pre-line">أدخل العادة المنشودة لنقوم ببناء جدول المتابعة السلوكي والتحفيزي...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Coaching Assistance -->
+            <div id="tab-content-coaching" class="tab-pane hidden">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-900">مساعد الكوتشينج السلوكي وجلسات التقويم (GROW Model)</h4>
+                        <p class="text-xs text-slate-500">توجيه الجلسات الحوارية بين القائد والموظف للتغلب على التحديات المهنية بلغة بناءة</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">المشكلة السلوكية أو الفجوة المطلوب معالجتها</label>
+                            <input type="text" id="coaching-gap" placeholder="مثال: ضعف التنسيق والتعامل بروح الفريق مع الأقسام الأخرى" class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">شخصية الموظف أو أسلوبه المفضل في التلقي</label>
+                            <select id="coaching-style" class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm">
+                                <option value="تحليلي وعملي (يهتم بالأرقام والحقائق)">تحليلي وعملي (يهتم بالأرقام والحقائق)</option>
+                                <option value="تعبيري ومندفع (يحب التقدير والتحفيز المعنوي)">تعبيري ومندفع (يحب التقدير والتحفيز المعنوي)</option>
+                                <option value="ودود وحذر (يحتاج للشعور بالأمان والدعم الهادئ)">ودود وحذر (يحتاج للشعور بالأمان والدعم الهادئ)</option>
+                            </select>
+                        </div>
+                        <button onclick="generateCoachingGuide()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition duration-150 text-sm flex items-center justify-center gap-2">
+                            <span>تجهيز حوار الكوتشينج الذكي</span>
+                        </button>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col min-h-[250px]">
+                        <span class="text-xs font-bold text-slate-400 mb-2">مرشد حوار الجلسة الموصى به:</span>
+                        <div id="coaching-result" class="text-sm text-slate-600 leading-relaxed overflow-y-auto whitespace-pre-line">حدد الفجوة واضغط على الزر للحصول على سيناريو الحوار المثالي...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Cross Training -->
+            <div id="tab-content-training" class="tab-pane hidden">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg></div>
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-900">مخطط ومصفوفة التدريب المتقاطع السريع (Cross-Training Planner)</h4>
+                        <p class="text-xs text-slate-500">تمكين وتدريب الموظفين على مهارات تخصصية أخرى لضمان استمرارية التشغيل دون انقطاع</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">الوظيفة أو المهمة المستهدفة للتدريب</label>
+                            <input type="text" id="training-target" placeholder="مثال: تشغيل آلة الإنتاج الأساسية أو إدخال البيانات المالية" class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">المدة الزمنية المتاحة للتدريب</label>
+                            <select id="training-duration" class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm">
+                                <option value="أسبوع واحد مكثف">أسبوع واحد مكثف</option>
+                                <option value="أسبوعين بمعدل ساعتين يومياً">أسبوعين بمعدل ساعتين يومياً</option>
+                                <option value="شهر كامل بشكل تدريجي">شهر كامل بشكل تدريجي</option>
+                            </select>
+                        </div>
+                        <button onclick="generateTrainingPlan()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 rounded-xl transition duration-150 text-sm flex items-center justify-center gap-2">
+                            <span>إنشاء خطة التمكين المتقاطع</span>
+                        </button>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col min-h-[250px]">
+                        <span class="text-xs font-bold text-slate-400 mb-2">الخطة التدريبية المقترحة:</span>
+                        <div id="training-result" class="text-sm text-slate-600 leading-relaxed overflow-y-auto whitespace-pre-line">حدد المهمة المستهدفة لنضع لك المسار العملي لنقل المعرفة...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 5: Motivation Generator -->
+            <div id="tab-content-motivation" class="tab-pane hidden">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg></div>
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-900">مولّد الرسائل والخطابات التحفيزية الفورية</h4>
+                        <p class="text-xs text-slate-500">صياغة رسائل ملهمة وتكريمية مخصصة للبريد الإلكتروني ومجموعات العمل الداخلية</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">المناسبة أو الإنجاز المستحق</label>
+                            <input type="text" id="motivation-reason" placeholder="مثال: إنهاء مشروع تقني معقد بنجاح وقبل الوقت المحدد" class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">النبرة العامة المطلوبة</label>
+                            <select id="motivation-tone" class="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:border-brand-600 text-sm">
+                                <option value="رسمية وحماسية (ملائمة للبريد الإلكتروني الرسمي)">رسمية وحماسية (ملائمة للبريد الإلكتروني الرسمي)</option>
+                                <option value="أخوية ومقربة (ملائمة لمجموعات الواتساب أو سلاك)">أخوية ومقربة (ملائمة لمجموعات الواتساب أو سلاك)</option>
+                                <option value="تأثيرية عميقة (للتشجيع بعد فترات ضغط العمل)">تأثيرية عميقة (للتشجيع بعد فترات ضغط العمل)</option>
+                            </select>
+                        </div>
+                        <button onclick="generateMotivationalMessage()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl transition duration-150 text-sm flex items-center justify-center gap-2">
+                            <span>توليد الرسالة التحفيزية الفورية</span>
+                        </button>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col min-h-[250px]">
+                        <span class="text-xs font-bold text-slate-400 mb-2">الرسالة التعبيرية الجاهزة للإرسال:</span>
+                        <div id="motivation-result" class="text-sm text-slate-600 leading-relaxed overflow-y-auto whitespace-pre-line">حدد المناسبة لإنشاء خطاب تقدير ملهم لفريقك...</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Guide Information Sections -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Column 1 & 2: Theoretical Guide & Execution -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Section 1: Introduction to BOS -->
+                <section class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4">ما هو دليل التميز التشغيلي والسلوكي (BOS)؟</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                        دليل **BOS (Behavioral & Operational Standards)** هو الإطار المرجعي الأول المخصص لتمكين الشركات من ضبط مستويات الالتزام السلوكي بشكل عملي وقابل للقياس، والابتعاد عن العشوائية في اتخاذ القرارات المرتبطة بالأداء المهني.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+                        <div class="bg-brand-50 border border-brand-100 p-4 rounded-xl">
+                            <span class="font-extrabold text-2xl text-brand-700 block">01</span>
+                            <span class="font-bold text-sm text-slate-900 block mt-1">النمذجة السلوكية</span>
+                            <span class="text-xs text-slate-500 mt-1 block">تحديد متطلبات السلوك والإنتاجية بكل دقة لكل مهمة.</span>
+                        </div>
+                        <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl">
+                            <span class="font-extrabold text-2xl text-amber-700 block">02</span>
+                            <span class="font-bold text-sm text-slate-900 block mt-1">المتابعة التفاعلية</span>
+                            <span class="text-xs text-slate-500 mt-1 block">نقل عمليات المتابعة والتقويم السلوكي إلى نظام ذكي ومستمر.</span>
+                        </div>
+                        <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl">
+                            <span class="font-extrabold text-2xl text-emerald-700 block">03</span>
+                            <span class="font-bold text-sm text-slate-900 block mt-1">الاستجابة الاستباقية</span>
+                            <span class="text-xs text-slate-500 mt-1 block">معالجة حالات الانسحاب أو الفتور قبل تحولها لانسحاب تام.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Implementation Steps -->
+                <section class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4">مراحل الالتزام السلوكي الخمسة وتطبيقها</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-bold text-sm shrink-0 mt-1">1</div>
+                            <div>
+                                <h5 class="font-bold text-slate-900 text-base">التأسيس والتوعية</h5>
+                                <p class="text-slate-500 text-xs sm:text-sm mt-0.5">شرح قواعد السلوك المهني للفريق بوضوح وتوضيح "لماذا" يحقق الالتزام الأهداف التشغيلية المشتركة.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-bold text-sm shrink-0 mt-1">2</div>
+                            <div>
+                                <h5 class="font-bold text-slate-900 text-base">المتابعة السلوكية</h5>
+                                <p class="text-slate-500 text-xs sm:text-sm mt-0.5">الرصد الإيجابي بدون تصيد أخطاء، وقياس التغيرات السلوكية الطفيفة باستخدام أدوات محاكي الاستقالة الصامتة.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-bold text-sm shrink-0 mt-1">3</div>
+                            <div>
+                                <h5 class="font-bold text-slate-900 text-base">جلسات الكوتشينج السلوكي</h5>
+                                <p class="text-slate-500 text-xs sm:text-sm mt-0.5">توجيه الأداء الحواري السلوكي المباشر بانتظام لدعم السلوكيات الإيجابية وتقويم السلوكيات السلبية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Column 3: Quick Tools & Resources -->
+            <div class="space-y-8">
+                
+                <!-- Quick Pomodoro Timer for Coaching/Focus -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h4 class="font-bold text-sm sm:text-base text-slate-900">مؤقت كوتشينج الـ 15 دقيقة</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4 leading-relaxed">جلسات الكوتشينج الفعالة لا ينبغي أن تتجاوز 15 دقيقة. استخدم هذا المؤقت لتركيز حديثك وجلسة التوجيه الموجهة للهدف.</p>
+                    
+                    <div class="bg-slate-50 border border-slate-100 rounded-xl p-4 text-center mb-4">
+                        <div id="timer-display" class="font-mono text-3xl font-bold text-slate-800">15:00</div>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <button onclick="toggleTimer()" id="timer-btn" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold py-2.5 rounded-lg transition duration-150">ابدأ المؤقت</button>
+                        <button onclick="resetTimer()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-3 py-2.5 rounded-lg transition duration-150">إعادة ضبط</button>
+                    </div>
+                </div>
+
+                <!-- Behavioral Matrix Cards -->
+                <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-md">
+                    <h4 class="font-bold text-sm sm:text-base text-white mb-3">القواعد الذهبية للانضباط التشغيلي</h4>
+                    <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                        <li class="flex gap-2"><span class="text-emerald-400 font-bold">✓</span>التركيز على بناء البيئة الحاضنة للسلوك قبل محاسبة الفرد.</li>
+                        <li class="flex gap-2"><span class="text-emerald-400 font-bold">✓</span>التحفيز اللحظي يعادل تأثيره ثلاثة أضعاف العقاب المتأخر.</li>
+                        <li class="flex gap-2"><span class="text-emerald-400 font-bold">✓</span>الموظفون ينفذون ما يراه القائد مطبقاً من قبله أولاً (القدوة).</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="bg-white border-t border-slate-200 mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-xs gap-4">
+            <p>© 2026 دليل التميز التشغيلي والسلوكي (BOS). جميع الحقوق محفوظة لشركتكم الموقرة.</p>
+            <p>نسخة مدمجة ومدعومة بالكامل بنظام AI-HR Copilot</p>
+        </div>
+    </footer>
+
+    <!-- Interactive AI Scripts -->
+    <script>
+        // API Configuration
+        const apiKey = ""; // Will be automatically injected at runtime by the execution environment
+
+        // Helper to delay
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+
+        // Call Gemini API with Exponential Backoff
+        async function fetchGeminiResponse(prompt, systemInstruction) {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: { parts: [{ text: systemInstruction }] }
+            };
+
+            let delayTime = 1000;
+            for (let i = 0; i < 5; i++) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        return data.candidates?.[0]?.content?.parts?.[0]?.text || "حدث خطأ غير متوقع في معالجة الرد.";
+                    }
+                } catch (e) {
+                    // Fail silently for backoff retry
+                }
+                await delay(delayTime);
+                delayTime *= 2;
+            }
+            return "نأسف، تعذر الاتصال بالخدمة حالياً. الرجاء المحاولة مرة أخرى لاحقاً.";
+        }
+
+        // Tab Switcher Logic
+        function switchTab(tabId) {
+            // Hide all panes
+            document.querySelectorAll('.tab-pane').forEach(el => el.classList.add('hidden'));
+            // Deactivate all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-brand-600', 'bg-brand-50/50', 'ring-2', 'ring-brand-500/10');
+                btn.classList.add('border-slate-200', 'bg-white');
+            });
+
+            // Show current tab content
+            document.getElementById(`tab-content-${tabId}`).classList.remove('hidden');
+            // Active current button
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            activeBtn.classList.remove('border-slate-200', 'bg-white');
+            activeBtn.classList.add('border-brand-600', 'bg-brand-50/50', 'ring-2', 'ring-brand-500/10');
+        }
+
+        // Initialize default tab on load
+        window.onload = function() {
+            switchTab('retention');
+        };
+
+        // 1. Quiet Quitting Simulator Action
+        async function runRetentionAnalysis() {
+            const empName = document.getElementById('retention-emp-name').value || "موظف مجهول المسمى";
+            const behaviors = document.getElementById('retention-behaviors').value;
+            const output = document.getElementById('retention-result');
+
+            if (!behaviors.trim()) {
+                output.textContent = "الرجاء كتابة السلوكيات والملاحظات السلوكية المرصودة أولاً ليقوم الذكاء الاصطناعي بتحليلها.";
+                return;
+            }
+
+            output.innerHTML = `<div class="flex items-center gap-2"><div class="animate-spin rounded-full h-4 w-4 border-2 border-slate-500 border-t-transparent"></div><span>جاري تحليل الأعراض السلوكية واستنباط خطط الاستبقاء...</span></div>`;
+
+            const systemInstruction = "أنت مستشار أول في الموارد البشرية والتميز السلوكي (BOS). مهمتك هي تحليل السلوكيات المدخلة للتنبؤ بمستوى الاستقالة الصامتة وتقديم خطة حماية واستبقاء ذكية ومخصصة ومباشرة وقابلة للتطبيق كجزء من الممارسات الموثوقة.";
+            const prompt = `المسمى الوظيفي للموظف: ${empName}. \nالملاحظات السلوكية الحالية المرصودة: ${behaviors}. \nقم بتحليل مدى إمكانية انسحابه الصامت، حدد 3 نقاط مخاطر حقيقية، ثم قدم 3 توصيات عاجلة وتفاعلية للمدير المباشر لإنقاذه وإعادته للانخراط والمشاركة الفعالة بأسلوب محفز وصحي.`;
+
+            const result = await fetchGeminiResponse(prompt, systemInstruction);
+            output.textContent = result;
+        }
+
+        // 2. Habit Plan Action
+        async function generateHabitPlan() {
+            const target = document.getElementById('habit-target').value;
+            const challenge = document.getElementById('habit-challenge').value || "مقاومة التغيير وضغوط المهام اليومية";
+            const output = document.getElementById('habits-result');
+
+            if (!target.trim()) {
+                output.textContent = "الرجاء كتابة العادة السلوكية التي ترغب في بنائها لدى فريقك أو موظفك.";
+                return;
+            }
+
+            output.innerHTML = `<div class="flex items-center gap-2"><div class="animate-spin rounded-full h-4 w-4 border-2 border-emerald-500 border-t-transparent"></div><span>جاري رسم مسار خطة الـ 21 يوماً السلوكية...</span></div>`;
+
+            const systemInstruction = "أنت مدرب كوتشينج وخبير في العلوم السلوكية التنظيمية. مهمتك تحويل الرغبات إلى سلوكيات يومية مرسخة من خلال منهجيات العلوم السلوكية وعلم بناء العادات.";
+            const prompt = `العادة المطلوبة: ${target}. \nالتحديات الحالية: ${challenge}. \nقم ببناء جدول زمني مقسم لثلاث مراحل (الأسبوع الأول: البداية السهلة والملاحظة، الأسبوع الثاني: الترسيخ الفعلي، الأسبوع الثالث: دمج الهوية والاحتفال). قدم لكل مرحلة توجيهات سلوكية عملية، ومحفزات يومية، مع اقتراح طريقة ذكية لقياس الالتزام اليومي.`;
+
+            const result = await fetchGeminiResponse(prompt, systemInstruction);
+            output.textContent = result;
+        }
+
+        // 3. Coaching Scenario Action
+        async function generateCoachingGuide() {
+            const gap = document.getElementById('coaching-gap').value;
+            const style = document.getElementById('coaching-style').value;
+            const output = document.getElementById('coaching-result');
+
+            if (!gap.trim()) {
+                output.textContent = "الرجاء كتابة المشكلة أو الفجوة السلوكية المطلوب إعداد سيناريو الكوتشينج لها.";
+                return;
+            }
+
+            output.innerHTML = `<div class="flex items-center gap-2"><div class="animate-spin rounded-full h-4 w-4 border-2 border-blue-500 border-t-transparent"></div><span>جاري صياغة سيناريو حوار الكوتشينج المناسب لشخصية الموظف...</span></div>`;
+
+            const systemInstruction = "أنت كوتش تنفيذي محترف ومعتمد دولياً من ICF. تتقن نموذج GROW لتطوير الأداء ومعالجة الفجوات السلوكية بطرق إيجابية قائمة على المساءلة والتجرد التام.";
+            const prompt = `الفجوة السلوكية: ${gap}. \nشخصية الموظف: ${style}. \nقم بتصميم دليل حواري عملي يعتمد نموذج GROW (الهدف Goal، الواقع Reality، الخيارات Options، الإرادة Will). ضع أسئلة مخصصة يطرحها القائد في الجلسة تناسب شخصيته، مع سيناريو متوقع وإيجابي يختتم بالتزام عملي للموظف.`;
+
+            const result = await fetchGeminiResponse(prompt, systemInstruction);
+            output.textContent = result;
+        }
+
+        // 4. Cross Training Planner Action
+        async function generateTrainingPlan() {
+            const target = document.getElementById('training-target').value;
+            const duration = document.getElementById('training-duration').value;
+            const output = document.getElementById('training-result');
+
+            if (!target.trim()) {
+                output.textContent = "الرجاء إدخال اسم الوظيفة أو المهمة لتخطيط نقل معرفتها وتدريب الموظفين عليها.";
+                return;
+            }
+
+            output.innerHTML = `<div class="flex items-center gap-2"><div class="animate-spin rounded-full h-4 w-4 border-2 border-amber-500 border-t-transparent"></div><span>جاري جدولة مسار مصفوفة التدريب المتقاطع السريع...</span></div>`;
+
+            const systemInstruction = "أنت مدير عمليات وبناء قدرات تشغيلية في بيئات العمل الرشيقة. غايتك ضمان استمرارية الأعمال من خلال تدريب وتطوير الكفاءات المتقاطعة والحد من الاعتماد على الأفراد الفرديين.";
+            const prompt = `المهمة/الوظيفة المراد التدريب المتقاطع عليها: ${target}. \nالجدول الزمني المتاح: ${duration}. \nقم بتصميم خطة تدريب متقاطع متكاملة تحتوي على المعارف الأساسية الواجب نقلها، مراحل التدريب العملي اليومية أو الأسبوعية، وطريقة فورية وعملية لتقييم كفاءة المتدرب الجديد والتأكد من إتقانه المهمة بنسبة 100%.`;
+
+            const result = await fetchGeminiResponse(prompt, systemInstruction);
+            output.textContent = result;
+        }
+
+        // 5. Motivational Generator Action
+        async function generateMotivationalMessage() {
+            const reason = document.getElementById('motivation-reason').value;
+            const tone = document.getElementById('motivation-tone').value;
+            const output = document.getElementById('motivation-result');
+
+            if (!reason.trim()) {
+                output.textContent = "الرجاء إدخال المناسبة أو الإنجاز المطلوب صياغة خطاب تقديري له.";
+                return;
+            }
+
+            output.innerHTML = `<div class="flex items-center gap-2"><div class="animate-spin rounded-full h-4 w-4 border-2 border-indigo-500 border-t-transparent"></div><span>جاري توليد وصقل خطاب التحفيز والتكريم البليغ...</span></div>`;
+
+            const systemInstruction = "أنت خبير في التواصل الداخلي في المؤسسات ومحفز سلوكي متميز. تبدع في صياغة كلمات وجمل تثير الحماس الداخلي وتجعل الموظف يشعر بالتقدير والانتماء الحقيقي.";
+            const prompt = `المناسبة أو الإنجاز: ${reason}. \nالنبرة المطلوبة: ${tone}. \nقم بكتابة رسالة شكر وتقدير مبهرة، تحتوي على كلمات فخر مؤثرة، تؤكد على ارتباط هذا السلوك الفردي الرائع بنجاح المنشأة العام، مضافاً إليها عبارات تحث على مواصلة النجاح المشترك.`;
+
+            const result = await fetchGeminiResponse(prompt, systemInstruction);
+            output.textContent = result;
+        }
+
+        // Pomodoro Timer Logic
+        let timerInterval = null;
+        let timerSeconds = 15 * 60; // 15 minutes default
+
+        function toggleTimer() {
+            const btn = document.getElementById('timer-btn');
+            const display = document.getElementById('timer-display');
+
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+                btn.textContent = "استئناف المؤقت";
+                btn.className = "flex-1 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold py-2.5 rounded-lg transition duration-150";
+            } else {
+                btn.textContent = "إيقاف مؤقت";
+                btn.className = "flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2.5 rounded-lg transition duration-150";
+                
+                timerInterval = setInterval(() => {
+                    if (timerSeconds <= 0) {
+                        clearInterval(timerInterval);
+                        timerInterval = null;
+                        display.textContent = "00:00";
+                        btn.textContent = "انتهت الجلسة";
+                        btn.disabled = true;
+                        return;
+                    }
+                    timerSeconds--;
+                    const minutes = Math.floor(timerSeconds / 60);
+                    const seconds = timerSeconds % 60;
+                    display.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                }, 1000);
+            }
+        }
+
+        function resetTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+            timerSeconds = 15 * 60;
+            document.getElementById('timer-display').textContent = "15:00";
+            const btn = document.getElementById('timer-btn');
+            btn.textContent = "ابدأ المؤقت";
+            btn.disabled = false;
+            btn.className = "flex-1 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold py-2.5 rounded-lg transition duration-150";
+        }
+    </script>
+</body>
+</html>
